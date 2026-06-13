@@ -1,0 +1,280 @@
+{
+  "client": "cmc_web",
+  "title": "CoinMarketCap Web Reverse Client",
+  "base_url": "https://api.coinmarketcap.com",
+  "auth": "browser headers, no public api key",
+  "endpoints": [
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/listing",
+      "listing/search/tokens by platform"
+    ],
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/detail",
+      "detail"
+    ],
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/detail/lite",
+      "detail lite"
+    ],
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/market-pairs/latest",
+      "market pairs"
+    ],
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/web/exchange-pair-info",
+      "exchange pair info"
+    ],
+    [
+      "GET",
+      "/data-api/v3/cryptocurrency/quote/latest",
+      "quote latest"
+    ],
+    [
+      "GET",
+      "/data-api/v3.3/cryptocurrency/detail/chart",
+      "chart"
+    ],
+    [
+      "GET",
+      "/data-api/v3.1/cryptocurrency/historical",
+      "historical"
+    ],
+    [
+      "POST",
+      "/content/v3/news-tldr/list",
+      "news tldr"
+    ],
+    [
+      "GET",
+      "/aggr/v3/news/cdp",
+      "news"
+    ],
+    [
+      "GET",
+      "/content/v3/ad-banner/top",
+      "ad banner"
+    ],
+    [
+      "GET",
+      "/data-api/v3/chart-annotation",
+      "chart annotation"
+    ],
+    [
+      "GET",
+      "/data-api/v3/coin-treasury/table",
+      "treasury"
+    ],
+    [
+      "GET",
+      "/data-api/v3/unified-trending/top-boost/listing",
+      "top boost"
+    ]
+  ],
+  "browser_capture": {
+    "cmc_bitcoin": [
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/captcha/type",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/business/switch/get",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/news-tldr/list",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3.3/cryptocurrency/detail/chart?id=1&interval=5m&convertId=2781&range=1D",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3.3/cryptocurrency/detail/chart?id=1&interval=7d&convertId=2781&range=All",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/captcha/type",
+        "postData": ""
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/business/switch/get",
+        "postData": "{\"business\":\"app\",\"switchKey\":\"predictionBlocked\"}"
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/news-tldr/list",
+        "postData": "{\"slug\":\"bitcoin\",\"languageCode\":\"en\"}"
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3.3/cryptocurrency/detail/chart?id=1&interval=5m&convertId=2781&range=1D",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3.3/cryptocurrency/detail/chart?id=1&interval=7d&convertId=2781&range=All",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/unified-trending/top-boost/listing?size=10",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/unified-trending/top-boost/listing?size=10",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/ad-banner/top?country=BY&deviceId=b82fa516-e90d-41ee-9da5-4ca06c643a64",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/ad/conversion/query?cryptoId=1&country=BY&adSlot=BUY+ONLY+CDP",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/ad-banner/top?country=BY&deviceId=b82fa516-e90d-41ee-9da5-4ca06c643a64",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/ad/conversion/query?cryptoId=1&country=BY&adSlot=BUY+ONLY+CDP",
+        "postData": ""
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/content/v3/news-tldr/list",
+        "postData": "{\"slug\":\"bitcoin\",\"languageCode\":\"en\"}"
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/business/switch/get",
+        "postData": "{\"business\":\"app\",\"switchKey\":\"predictionBlocked\"}"
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/airdrop/events/query",
+        "postData": ""
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/airdrop/events/query",
+        "postData": "{\"status\":\"ONGOING\",\"start\":0,\"platform\":\"web\",\"limit\":9999}"
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/chart-annotation?target=bitcoin&interval=all&language=en",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/chart-annotation?target=bitcoin&interval=all&language=en",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/market-pairs/latest?slug=bitcoin&start=1&limit=10&category=spot&centerType=all&sort=cmc_rank_advanced&direction=desc&spotUntracked=true",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/market-pairs/latest?slug=bitcoin&start=1&limit=10&category=spot&centerType=all&sort=cmc_rank_advanced&direction=desc&spotUntracked=true",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/web/exchange-pair-info?slug=bitcoin",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/web/exchange-pair-info?slug=bitcoin",
+        "postData": ""
+      },
+      {
+        "method": "POST",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/business/switch/get",
+        "postData": "{\"business\":\"gravity\"}"
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/lite?id=1",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/detail/lite?id=1",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/quote/latest?id=1&convertId=2781",
+        "postData": ""
+      },
+      {
+        "method": "GET",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/coin-treasury/table?id=1&start=1&limit=10&sort=holdings&sortType=desc",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/quote/latest?id=1&convertId=2781",
+        "postData": ""
+      },
+      {
+        "method": "OPTIONS",
+        "status": 200,
+        "url": "https://api.coinmarketcap.com/data-api/v3/coin-treasury/table?id=1&start=1&limit=10&sort=holdings&sortType=desc",
+        "postData": ""
+      }
+    ]
+  }
+}

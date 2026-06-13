@@ -1,0 +1,29 @@
+        <!doctype html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>CoinMarketCap Web Reverse Client</title>
+          <style>
+            body { margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; color:#111; background:#f6f7f9; }
+            main { max-width:960px; margin:0 auto; padding:48px 20px; }
+            h1 { font-size:42px; margin:0 0 12px; letter-spacing:0; }
+            .panel { background:white; border:1px solid #dde1e7; border-radius:8px; padding:20px; margin:18px 0; }
+            code, pre { background:#111820; color:#e8f2ff; border-radius:6px; }
+            code { padding:2px 5px; }
+            pre { padding:16px; overflow:auto; }
+            ul { columns:2; padding-left:20px; }
+            a { color:#0756d6; }
+            @media (max-width:720px) { ul { columns:1; } h1 { font-size:32px; } }
+          </style>
+        </head>
+        <body><main>
+          <h1>CoinMarketCap Web Reverse Client</h1>
+          <p>Standalone Python client for browser-backed crypto market endpoints.</p>
+          <div class="panel"><h2>Install</h2><pre>pip install git+https://github.com/bigidulka/dex-client-cmc-web.git</pre></div>
+          <div class="panel"><h2>Usage</h2><pre>from dex_client_cmc_web import CMCWebClient
+
+client = CMCWebClient()</pre></div>
+          <div class="panel"><h2>Methods</h2><ul><li><code>listing</code></li><li><code>search_by_ticker</code></li><li><code>detail</code></li><li><code>detail_lite</code></li><li><code>quote_latest</code></li><li><code>market_pairs</code></li><li><code>exchange_pair_info</code></li><li><code>chart</code></li><li><code>historical</code></li><li><code>news</code></li><li><code>news_tldr</code></li><li><code>chart_annotation</code></li><li><code>coin_treasury</code></li><li><code>top_boost_listing</code></li><li><code>whitepaper_summary</code></li></ul></div>
+          <div class="panel"><h2>Inventory</h2><p>See <a href="../endpoint_inventory.json">endpoint_inventory.json</a>.</p></div>
+        </main></body></html>
